@@ -1,0 +1,304 @@
+:root {
+    --background: #F2F2F2;
+    --background-sub: #E8E8E8;
+    --divider-light: #D1D1D1;
+    --divider-dark: #000000;
+    --nav-button: #000000;
+    --nav-button-inactive: rgba(0, 0, 0, 0.35);
+    --link-color: rgba(0, 0, 0, 0.90);
+    --link-inactive: rgba(0, 0, 0, 0.25);
+    --title: #000000;
+    --title-sub: #A1A1A1;
+    --paragraph-normal: #808080;
+    --paragraph-black: #202020;
+    --paragraph-swift: #F25700;
+    --paragraph-swiftui: #4987FF;
+    --paragraph-cpp: #0084CE;
+    --paragraph-qt: #4CC700;
+    --paragraph-js: #F9B300;
+    --paragraph-html: #DB3500;
+    --paragraph-css: #0085E5;
+    --paragraph-electron: #86C7C7;
+    --paragraph-csharp: #BA2DEC;
+    --paragraph-unity: #212121;
+    --paragraph-python: #5A97BA;
+    --image-background: #DADADA;
+    --overlay-title-light: #000000;
+    --overlay-paragraph-light: #474747;
+    --overlay-title-dark: #F4F4F4;
+    --overlay-paragraph-dark: #8C8C8C;
+}
+
+.disabled-link {
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: "NeueHaasUnicaProMedium";
+    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueHaasUnicaProMediumIt";
+    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-MediumIt.ttf") format("truetype");
+    font-weight: medium;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "NeueHaasUnicaProBold";
+    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueHaasUnicaProRegular";
+    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.nav-bar {
+    height: 50px;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--divider-light);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.nav-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .nav-item {
+    color: var(--nav-button-inactive);
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bolder;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "NeueHaasUnicaProMedium";
+}
+
+.nav-bar .active-nav-item {
+    color: var(--nav-button) !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bolder;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "NeueHaasUnicaProMedium";
+}
+
+.about-contents {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20%;
+    padding-left: 15%;
+    border-top: 1px solid var(--divider-light);
+    padding-bottom: 50px;
+    overflow: auto;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-inner {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 65px;
+}
+
+#about-inner-right {
+    margin-top: 30px;
+    flex-grow: 1.21;
+}
+
+#about-inner-left {
+    flex-direction: row;
+    text-align: right;
+    justify-content: flex-end
+}
+
+.about-image-container {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.about-image {
+    display: block;
+    background-color: #ffd000;
+    height: 275px;
+    width: 275px;
+}
+
+.about-image>img {
+    height: auto;
+    width: 275px;
+    object-fit: contain;
+}
+
+.about-links-container {
+    background-color: var(--background-sub);
+    display: block;
+    height: 30px;
+}
+
+.about-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    text-align: left;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.about-divider {
+    width: 2px;
+    background-color: var(--divider-dark);
+    margin-bottom: 50px;
+}
+
+.text-title {
+    color: var(--title);
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProMedium";
+}
+
+.text-title-small {
+    color: var(--title);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    margin-top: 15px;
+    font-family: "NeueHaasUnicaProMedium";
+}
+
+.text-paragraph {
+    color: var(--paragraph-normal);
+    font-size: 15px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProMedium";
+}
+
+.text-paragraph me {
+    font-weight: bold;
+    color: var(--paragraph-black);
+}
+
+.text-paragraph dallas {
+    font-weight: bold;
+    color: var(--paragraph-black);
+}
+
+.text-paragraph swift {
+    font-weight: bold;
+    color: var(--paragraph-swift);
+}
+
+.text-paragraph swiftui {
+    font-weight: bold;
+    color: var(--paragraph-swiftui);
+}
+
+.text-paragraph cpp {
+    font-weight: bold;
+    color: var(--paragraph-cpp);
+}
+
+.text-paragraph qt {
+    font-weight: bold;
+    color: var(--paragraph-qt);
+}
+
+.text-paragraph js {
+    font-weight: bold;
+    color: var(--paragraph-js);
+}
+
+.text-paragraph htm {
+    font-weight: bold;
+    color: var(--paragraph-html);
+}
+
+.text-paragraph css {
+    font-weight: bold;
+    color: var(--paragraph-css);
+}
+
+.text-paragraph electron {
+    font-weight: bold;
+    color: var(--paragraph-electron);
+}
+
+.text-paragraph csharp {
+    font-weight: bold;
+    color: var(--paragraph-csharp);
+}
+
+.text-paragraph unity {
+    font-weight: bold;
+    color: var(--paragraph-unity);
+}
+
+.text-paragraph python {
+    font-weight: bold;
+    color: var(--paragraph-python);
+}
+
+body.theme-dark {
+    /*TODO: change colors for dark mode*/
+    --background: #F2F2F2;
+    --background-sub: #E8E8E8;
+    --divider-light: #D1D1D1;
+    --divider-dark: #000000;
+    --nav-button: #000000;
+    --nav-button-inactive: rgba(0, 0, 0, 0.35);
+    --link-color: rgba(0, 0, 0, 0.90);
+    --link-inactive: rgba(0, 0, 0, 0.25);
+    --title: #000000;
+    --title-sub: #A1A1A1;
+    --paragraph-normal: #808080;
+    --paragraph-black: #202020;
+    --paragraph-swift: #F25700;
+    --paragraph-swiftui: #4987FF;
+    --paragraph-cpp: #0084CE;
+    --paragraph-qt: #4CC700;
+    --paragraph-js: #F9B300;
+    --paragraph-html: #DB3500;
+    --paragraph-css: #0085E5;
+    --paragraph-electron: #86C7C7;
+    --paragraph-csharp: #BA2DEC;
+    --paragraph-unity: #212121;
+    --paragraph-python: #5A97BA;
+    --image-background: #DADADA;
+    --overlay-title-light: #000000;
+    --overlay-paragraph-light: #474747;
+    --overlay-title-dark: #F4F4F4;
+    --overlay-paragraph-dark: #8C8C8C;
+}
