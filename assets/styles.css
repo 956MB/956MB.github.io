@@ -24,9 +24,23 @@
     --paragraph-python: #5A97BA;
     --image-background: #DADADA;
     --overlay-title-light: #000000;
-    --overlay-paragraph-light: #474747;
     --overlay-title-dark: #F4F4F4;
-    --overlay-paragraph-dark: #8C8C8C;
+    --overlay-paragraph-light: #474747;
+    --overlay-paragraph-dark: rgba(205, 205, 205, 0.85);
+    --overlay-panel-intro: rgba(242, 242, 242, 0.50);
+    --overlay-panel-opgg: rgb(24, 24, 27, 0.50);
+    --overlay-panel-lolicon: rgba(2, 11, 21, 0.50);
+    --overlay-panel-plan: rgba(59, 59, 59, 0.50);
+    --overlay-panel-p3: rgba(95, 98, 101, 0.18);
+    --overlay-panel-c40: rgba(95, 98, 101, 0.18);
+    --overlay-panel-cybertruck: rgba(95, 98, 101, 0.18);
+    --overlay-gradient-intro: #E5E5E5;
+    --overlay-gradient-opgg: #19191D;
+    --overlay-gradient-lolicon: #020D18;
+    --overlay-gradient-plan: #2B2B2B;
+    --overlay-gradient-p3: #9D9D9D;
+    --overlay-gradient-c40: #E5E5E5;
+    --overlay-gradient-cybertruck: #9A9C9F;
 }
 
 .disabled-link {
@@ -334,6 +348,7 @@ body {
 
 .design-image-container {
     display: block;
+    place-items: center;
     /* width: -moz-fit-content; */
     /* width: fit-content; */
 }
@@ -375,6 +390,293 @@ body {
     cursor: pointer;
 }
 
+.design-overlay-panel-intro {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-intro:hover .design-overlay-panel-intro {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-intro);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-opgg {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-opgg:hover .design-overlay-panel-opgg {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-opgg);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-lol {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-lol:hover .design-overlay-panel-lol {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-lolicon);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-plan {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-plan:hover .design-overlay-panel-plan {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-plan);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-p3 {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-p3:hover .design-overlay-panel-p3 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-p3);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-c40 {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-c40:hover .design-overlay-panel-c40 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-c40);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-overlay-panel-cybertruck {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-cybertruck:hover .design-overlay-panel-cybertruck {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: var(--overlay-panel-p3);
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    /* height: 50px; */
+    width: 759px;
+}
+
+.design-image-overlay-intro {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-intro:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-intro));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-opgg {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-opgg:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-opgg));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-lol {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-lol:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-lolicon));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-plan {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-plan:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-plan));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-p3 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-p3:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-p3));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-c40 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-c40:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-c40));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
+.design-image-overlay-cybertruck {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+}
+
+.design-image-overlay-cybertruck:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-cybertruck));
+    z-index: 2;
+    height: 466px;
+    width: 759px;
+    cursor: pointer;
+}
+
 .about-links-container {
     background-color: var(--background-sub);
     display: block;
@@ -394,6 +696,32 @@ body {
     text-align: left;
     flex-direction: column;
     row-gap: 15px;
+}
+
+.text-container-overlay-vertical {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    text-align: left;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.text-container-overlay-horizontal {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 15px;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-container-overlay-horizontal #align-left {
+    margin-right: 10px !important;
+}
+
+.text-container-overlay-horizontal #align-right {
+    margin-left: 10px !important;
 }
 
 #text-container-left {
@@ -442,6 +770,22 @@ body {
     font-family: "NeueHaasUnicaProMedium";
 }
 
+.text-title-overlay-light {
+    color: var(--overlay-title-dark);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
+.text-title-overlay-dark {
+    color: var(--overlay-title-light);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
 .text-title-small {
     color: var(--title);
     font-weight: bold;
@@ -473,6 +817,22 @@ body {
     color: var(--paragraph-normal);
     /* font-weight: bold; */
     font-size: 15px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
+.text-paragraph-overlay-light {
+    color: var(--overlay-paragraph-dark);
+    /* font-weight: bold; */
+    font-size: 14px;
+    margin: 0;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
+.text-paragraph-overlay-dark {
+    color: var(--overlay-paragraph-light);
+    /* font-weight: bold; */
+    font-size: 14px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
 }
@@ -572,4 +932,11 @@ body.theme-dark {
     --overlay-paragraph-light: #474747;
     --overlay-title-dark: #F4F4F4;
     --overlay-paragraph-dark: #8C8C8C;
+    --overlay-gradient-intro: #E5E5E5;
+    --overlay-gradient-opgg: #19191D;
+    --overlay-gradient-lolicon: #020D18;
+    --overlay-gradient-plan: #2B2B2B;
+    --overlay-gradient-p3: #9D9D9D;
+    --overlay-gradient-c40: #E5E5E5;
+    --overlay-gradient-cybertruck: #9A9C9F;
 }
