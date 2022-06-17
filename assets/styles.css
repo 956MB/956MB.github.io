@@ -664,7 +664,7 @@ body {
     margin: 0;
     text-align: left;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 .text-container-overlay-vertical {
