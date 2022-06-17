@@ -285,7 +285,7 @@ body {
 
 .about-image {
     display: block;
-    background-color: #ffd000;
+    /* background-color: #ffd000; */
     height: 275px;
     width: 275px;
 }
@@ -612,9 +612,44 @@ body {
 }
 
 .about-links-container {
-    background-color: var(--background-sub);
-    display: block;
+    /* background-color: var(--background-sub); */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    flex-direction: column;
+    /* background-color: #0084CE; */
+    padding-top: 8px;
+}
+
+.about-link-row {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 30px;
+    justify-content: space-between;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    /* align-content: space-between; */
+    /* background-color: #474747; */
+}
+
+.about-link-key {
+    /* margin-right: 20px; */
+    color: var(--link-inactive);
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
+.about-link-value {
+    /* margin-right: 20px; */
+    color: var(--link-color);
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "NeueHaasUnicaProRegular";
+    text-decoration: underline;
 }
 
 .page-spacer {
@@ -659,7 +694,7 @@ body {
 }
 
 #text-container-about {
-    padding-right: 40%;
+    padding-right: 35%;
 }
 
 #text-container-left {
