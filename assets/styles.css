@@ -1,7 +1,7 @@
 :root {
+    color-scheme: light;
     --background: #F2F2F2;
     --background-sub: #E8E8E8;
-    /* --background-image-view-overlay: rgb(242, 242, 242, 0.75); */
     --background-image-view-overlay: rgba(0, 0, 0, 0.85);
     --background-image-view-overlay-light: rgb(242, 242, 242, 0.75);
     --divider-light: #D1D1D1;
@@ -99,7 +99,7 @@ body {
     justify-content: center;
     background-color: var(--background-image-view-overlay);
     z-index: 3;
-    padding: 10%;
+    padding: 7%;
 }
 
 .under-overlay {
@@ -723,6 +723,12 @@ body {
     object-fit: contain;
 }
 
+body.theme-dark .github-icon>img {
+    max-width: 100%;
+    object-fit: contain;
+    filter: invert();
+}
+
 .text-container-overlay-vertical {
     display: flex;
     flex-wrap: wrap;
@@ -762,8 +768,14 @@ body {
 }
 
 .divider-top {
-    width: 2px;
-    background-color: var(--divider-dark);
+    width: 1px;
+    background-color: var(--divider-light);
+    margin-top: 50px;
+}
+
+body.theme-dark .divider-top {
+    width: 1px;
+    background-color: var(--divider-light);
     margin-top: 50px;
 }
 
@@ -772,8 +784,13 @@ body {
 }
 
 .divider-bottom {
-    width: 2px;
-    background-color: var(--divider-dark);
+    width: 1px;
+    background-color: var(--divider-light);
+}
+
+body.theme-dark .divider-bottom {
+    width: 1px;
+    background-color: var(--divider-light);
 }
 
 .divider-section {
@@ -784,10 +801,17 @@ body {
 }
 
 .divider-left {
-    height: 2px;
+    height: 1px;
     width: 100%;
     margin-left: 35px;
-    background-color: var(--divider-dark);
+    background-color: var(--divider-light);
+}
+
+body.theme-dark .divider-left {
+    height: 1px;
+    width: 100%;
+    margin-left: 35px;
+    background-color: var(--divider-light);
 }
 
 #divider-about {
@@ -966,7 +990,7 @@ body {
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-right-about {
-        padding-top: 0;
+        padding-top: 10px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;
@@ -1065,7 +1089,7 @@ body {
     }
     .project-image {
         display: block;
-        background-color: #000000;
+        background-color: var(--background);
         height: auto;
     }
     .project-image>img {
@@ -1141,35 +1165,45 @@ body {
 }
 
 body.theme-dark {
+    color-scheme: dark;
     /*TODO: change colors for dark mode*/
-    --background: #F2F2F2;
+    --background: #111111;
     --background-sub: #E8E8E8;
-    --divider-light: #D1D1D1;
-    --divider-dark: #000000;
-    --nav-button: #000000;
-    --nav-button-inactive: rgba(0, 0, 0, 0.35);
-    --link-color: rgba(0, 0, 0, 0.90);
-    --link-inactive: rgba(0, 0, 0, 0.25);
-    --title: #000000;
+    --background-image-view-overlay: rgba(0, 0, 0, 0.85);
+    --background-image-view-overlay-light: rgb(242, 242, 242, 0.75);
+    --divider-light: #2c2c2c;
+    --divider-dark: #f2f2f2;
+    --nav-button: #ffffff;
+    --nav-button-inactive: rgb(255 255 255 / 35%);
+    --link-color: rgb(255 255 255 / 90%);
+    --link-inactive: rgb(255 255 255 / 34%);
+    --title: #f2f2f2;
     --title-sub: #A1A1A1;
-    --paragraph-normal: #808080;
-    --paragraph-black: #202020;
+    --paragraph-normal: #b7b7b7;
+    --paragraph-black: #f2f2f2;
     --paragraph-swift: #F25700;
-    --paragraph-swiftui: #4987FF;
-    --paragraph-cpp: #0084CE;
-    --paragraph-qt: #4CC700;
+    --paragraph-swiftui: #0f8dff;
+    --paragraph-cpp: #00a3ff;
+    --paragraph-qt: #61ff00;
     --paragraph-js: #F9B300;
     --paragraph-html: #DB3500;
-    --paragraph-css: #0085E5;
-    --paragraph-electron: #86C7C7;
+    --paragraph-css: #0094ff;
+    --paragraph-electron: #74e7e7;
     --paragraph-csharp: #BA2DEC;
-    --paragraph-unity: #212121;
-    --paragraph-python: #5A97BA;
-    --image-background: #DADADA;
+    --paragraph-unity: #f2f2f2;
+    --paragraph-python: #50b0e7;
+    --image-background: #111111;
     --overlay-title-light: #000000;
-    --overlay-paragraph-light: #474747;
     --overlay-title-dark: #F4F4F4;
-    --overlay-paragraph-dark: #8C8C8C;
+    --overlay-paragraph-light: #474747;
+    --overlay-paragraph-dark: rgba(205, 205, 205, 0.85);
+    --overlay-panel-intro: rgba(242, 242, 242, 0.50);
+    --overlay-panel-opgg: rgb(24, 24, 27, 0.50);
+    --overlay-panel-lolicon: rgba(2, 11, 21, 0.50);
+    --overlay-panel-plan: rgba(59, 59, 59, 0.50);
+    --overlay-panel-p3: rgba(95, 98, 101, 0.18);
+    --overlay-panel-c40: rgba(95, 98, 101, 0.18);
+    --overlay-panel-cybertruck: rgba(95, 98, 101, 0.18);
     --overlay-gradient-intro: #E5E5E5;
     --overlay-gradient-opgg: #19191D;
     --overlay-gradient-lolicon: #020D18;
