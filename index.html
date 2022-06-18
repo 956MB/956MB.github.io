@@ -29,7 +29,20 @@
     <div class="contents">
         <div class="scroll-container">
 
-            <div class="contents-row-project" id="first-row">
+            <div class="projects-bar">
+                <div class="projects-bar-inner">
+                    <a class="project-item" href="#tx4">TX4</a>
+                    <a class="project-item" href="#tdb">TDB</a>
+                    <a class="project-item" href="#2048">2048</a>
+                    <a class="project-item" href="#mssnc">MSSNC</a>
+                    <a class="project-item" href="#someaimgame">SOMEAIMGAME</a>
+                    <a class="project-item" href="#twanslate">TWANSLATE</a>
+                    <a class="project-item" href="#githubdesktop.css">GITHUBDESKTOP.CSS</a>
+                    <a class="project-item" href="#board-games.py">BOARD-GAMES.PY</a>
+                </div>
+            </div>
+
+            <div class="contents-row-project" id="tx4">
                 <div class="contents-inner" id="project-inner-text-left">
                     <div class="text-container" id="text-container-left">
                         <a class="text-title">TX4</a>
@@ -55,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="tdb">
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
@@ -89,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="2048">
                 <div class="contents-inner" id="project-inner-text-left">
                     <div class="text-container" id="text-container-left">
                         <a class="text-title">2048</a>
@@ -115,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="mssnc">
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
@@ -149,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="someaimgame">
                 <div class="contents-inner" id="project-inner-text-left">
                     <div class="text-container" id="text-container-left">
                         <a class="text-title">Some Aim Game</a>
@@ -175,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="twanslate">
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
@@ -209,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project">
+            <div class="contents-row-project" id="githubdesktop.css">
                 <div class="contents-inner" id="project-inner-text-left">
                     <div class="text-container" id="text-container-left">
                         <a class="text-title">GithubDesktop.css</a>
@@ -235,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="contents-row-project" id="last-row">
+            <div class="contents-row-project last-row" id="board-games.py">
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
@@ -275,7 +288,7 @@
 
     <script>
         function toggleOverlay(passImage) {
-            if (passImage != "") {
+            if (passImage) {
                 document.getElementById("overlay-img").src = passImage;
             }
             var overlay = document.getElementById("image-overlay");

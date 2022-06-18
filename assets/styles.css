@@ -145,6 +145,7 @@ body {
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
+    white-space: nowrap;
     font-family: "NeueHaasUnicaProRegular";
 }
 
@@ -155,6 +156,40 @@ body {
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
+    white-space: nowrap;
+    font-family: "NeueHaasUnicaProRegular";
+}
+
+.projects-bar {
+    height: 70px;
+    background-color: var(--background);
+    border-top: 1px solid var(--divider-light);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects-bar-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    direction: ltr;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.projects-bar .project-item {
+    color: var(--nav-button-inactive);
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
     font-family: "NeueHaasUnicaProRegular";
 }
 
@@ -223,11 +258,11 @@ body {
     padding-right: 5%;
 }
 
-#first-row {
+.first-row {
     margin-top: 50px;
 }
 
-#last-row {
+.last-row {
     margin-bottom: 50px;
     border-bottom: 1px solid var(--divider-light);
 }
@@ -956,6 +991,14 @@ body.theme-dark .divider-left {
 }
 
 @media only screen and (max-width: 950px) {
+    .projects-bar-inner {
+        width: 100%;
+        display: flex;
+        align-items: left;
+        overflow-x: scroll;
+        direction: ltr;
+        justify-content: left;
+    }
     .image-view-overlay {
         display: flex;
         position: absolute;
@@ -1106,7 +1149,7 @@ body.theme-dark .divider-left {
         display: block;
         margin-bottom: 30px;
     }
-    #first-row {
+    .first-row {
         margin-top: 0;
     }
     .contents-row-project {
