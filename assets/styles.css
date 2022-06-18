@@ -171,7 +171,7 @@ body {
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;
-    height: 475px;
+    height: auto;
     border-top: 1px solid var(--divider-light);
 }
 
@@ -181,6 +181,9 @@ body {
     flex-wrap: nowrap;
     overflow: none;
     justify-content: center;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #first-row {
@@ -207,7 +210,7 @@ body {
 }
 
 .design-inner-image {
-    margin-right: 30px;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     overflow: none;
@@ -263,6 +266,14 @@ body {
     justify-content: flex-end;
 }
 
+.image-main {
+    display: block;
+}
+
+.image-backup {
+    display: none;
+}
+
 #deisgn-inner-image-right {
     padding-left: 15px;
     flex-direction: row;
@@ -285,7 +296,6 @@ body {
 
 .about-image {
     display: block;
-    /* background-color: #ffd000; */
     height: 275px;
     width: 275px;
 }
@@ -293,6 +303,7 @@ body {
 .about-image>img {
     height: auto;
     width: 275px;
+    max-width: 100%;
     object-fit: contain;
 }
 
@@ -307,21 +318,20 @@ body {
 
 .project-image {
     display: block;
-    background-color: #000000;
     height: 475px;
 }
 
 .design-image {
     display: block;
     background-color: var(--image-background);
-    height: 466px;
-    width: 759px;
+}
+
+.image-empty {
+    display: block !important;
 }
 
 .design-image-empty {
     display: block;
-    height: 466px;
-    width: 759px;
 }
 
 .project-image>img {
@@ -329,11 +339,11 @@ body {
     width: auto;
     object-fit: cover;
     cursor: pointer;
+    background-color: #000000;
 }
 
 .design-image>img {
-    height: 466px;
-    width: 759px;
+    max-width: 100%;
     object-fit: contain;
     cursor: pointer;
 }
@@ -343,7 +353,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-intro:hover .design-overlay-panel-intro {
@@ -354,7 +363,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-opgg {
@@ -362,7 +370,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-opgg:hover .design-overlay-panel-opgg {
@@ -373,7 +380,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-lol {
@@ -381,7 +387,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-lol:hover .design-overlay-panel-lol {
@@ -392,7 +397,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-plan {
@@ -400,7 +404,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-plan:hover .design-overlay-panel-plan {
@@ -411,7 +414,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-p3 {
@@ -419,7 +421,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-p3:hover .design-overlay-panel-p3 {
@@ -430,7 +431,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-c40 {
@@ -438,7 +438,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-c40:hover .design-overlay-panel-c40 {
@@ -449,7 +448,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-overlay-panel-cybertruck {
@@ -457,7 +455,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-cybertruck:hover .design-overlay-panel-cybertruck {
@@ -468,7 +465,6 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
-    width: 759px;
 }
 
 .design-image-overlay-intro {
@@ -476,8 +472,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-intro:hover {
@@ -486,8 +482,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-intro));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -496,8 +492,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-opgg:hover {
@@ -506,8 +502,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-opgg));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -516,8 +512,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-lol:hover {
@@ -526,8 +522,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-lolicon));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -536,8 +532,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-plan:hover {
@@ -546,8 +542,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-plan));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -556,8 +552,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-p3:hover {
@@ -566,8 +562,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-p3));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -576,8 +572,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-c40:hover {
@@ -586,8 +582,8 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-c40));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -596,8 +592,8 @@ body {
     position: absolute;
     top: 0px;
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
 }
 
 .design-image-overlay-cybertruck:hover {
@@ -606,36 +602,33 @@ body {
     top: 0px;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-cybertruck));
     z-index: 2;
-    height: 466px;
-    width: 759px;
+    width: 44%;
+    height: 100%;
     cursor: pointer;
 }
 
 .about-links-container {
-    /* background-color: var(--background-sub); */
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     flex-direction: column;
-    /* background-color: #0084CE; */
     padding-top: 8px;
+    width: 100%;
+}
+
+#about-links-container-backup {
+    display: none;
 }
 
 .about-link-row {
-    /* display: block; */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;
     justify-content: space-between;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    /* align-content: space-between; */
-    /* background-color: #474747; */
 }
 
 .about-link-key {
-    /* margin-right: 20px; */
     color: var(--link-inactive);
     font-weight: bold;
     font-size: 13px;
@@ -644,7 +637,6 @@ body {
 }
 
 .about-link-value {
-    /* margin-right: 20px; */
     color: var(--link-color);
     font-weight: bold;
     font-size: 13px;
@@ -694,7 +686,7 @@ body {
 }
 
 #text-container-about {
-    padding-right: 35%;
+    padding-right: 25%;
 }
 
 #text-container-left {
@@ -709,6 +701,10 @@ body {
     width: 2px;
     background-color: var(--divider-dark);
     margin-top: 50px;
+}
+
+#divider-programming {
+    display: block;
 }
 
 .divider-bottom {
@@ -728,6 +724,10 @@ body {
     width: 100%;
     margin-left: 35px;
     background-color: var(--divider-dark);
+}
+
+#divider-about {
+    display: block;
 }
 
 .text-title {
@@ -777,7 +777,7 @@ body {
     font-weight: bold;
     font-size: 15px;
     margin: 0;
-    margin-left: 12.5%;
+    margin-left: 5%;
     font-family: "NeueHaasUnicaProRegular";
 }
 
@@ -865,6 +865,210 @@ body {
 .text-paragraph python {
     font-weight: bold;
     color: var(--paragraph-python);
+}
+
+@media only screen and (max-width: 950px) {
+    #text-container-about {
+        padding-right: 0;
+    }
+    #text-container-left {
+        padding-left: 0;
+    }
+    #text-container-right {
+        padding-right: 0;
+    }
+    .contents-row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-top: 1px solid var(--divider-light);
+    }
+    #project-inner-text-right-about {
+        padding-top: 0;
+        padding-left: 0;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        margin-right: 0;
+    }
+    #divider-about {
+        display: none;
+    }
+    #divider-programming {
+        display: none;
+    }
+    #project-inner-image-right {
+        padding-left: 0;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    #project-inner-image-left {
+        padding-right: 0;
+        flex-direction: row;
+        text-align: right;
+        justify-content: flex-end;
+    }
+    #deisgn-inner-image-right {
+        padding-left: 0;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    #deisgn-inner-image-left {
+        padding-right: 0;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    /* .image-empty {
+        display: none !important;
+    } */
+    .contents-row-design {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: none;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .design-inner-image {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: none;
+        flex: 1;
+    }
+    .design-image {
+        display: block;
+        background-color: none;
+        height: auto;
+        width: auto;
+    }
+    .design-image>img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    .text-title-section {
+        color: var(--nav-button-inactive);
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0;
+        margin-left: 5%;
+        font-family: "NeueHaasUnicaProRegular";
+    }
+    .image-main {
+        display: none;
+    }
+    .image-backup {
+        display: block;
+    }
+    .contents-inner {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .text-title-skills {
+        color: var(--title);
+        font-weight: bold;
+        font-size: 13px;
+        margin: 0;
+        margin-top: 15px;
+        font-family: "NeueHaasUnicaProMedium";
+    }
+    .project-image {
+        display: block;
+        background-color: #000000;
+        height: auto;
+    }
+    .project-image>img {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    .about-image-container {
+        display: none;
+    }
+    #about-links-container-backup {
+        display: block;
+        margin-bottom: 30px;
+    }
+    #first-row {
+        margin-top: 0;
+    }
+    .contents-row-project {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: none;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-top: 1px solid var(--divider-light);
+    }
+    #project-inner-text-left {
+        padding-top: 40px;
+        padding-right: 0;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    #project-inner-text-right {
+        padding-top: 40px;
+        padding-left: 0;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #text-container-left {
+        padding-left: 40%;
+    }
+    #text-container-right {
+        padding-right: 40%;
+    }
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1499px) {
+    #text-container-left {
+        padding-left: 30%;
+    }
+    #text-container-right {
+        padding-right: 30%;
+    }
+}
+
+@media only screen and (min-width: 1240px) and (max-width: 1369px) {
+    #text-container-left {
+        padding-left: 15%;
+    }
+    #text-container-right {
+        padding-right: 15%;
+    }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1239px) {
+    #text-container-left {
+        padding-left: 5%;
+    }
+    #text-container-right {
+        padding-right: 5%;
+    }
 }
 
 body.theme-dark {
