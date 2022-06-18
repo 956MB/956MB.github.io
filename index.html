@@ -10,6 +10,12 @@
 </head>
 
 <body>
+
+    <div class="image-view-overlay disable-overlay" id="image-overlay" onclick="toggleOverlay()">
+        <img src="" alt="" id="overlay-img" />
+    </div>
+    <!-- <div class="under-overlay disable-overlay" id="under-overlay"></div> -->
+
     <div class="nav-bar">
         <div class="nav-bar-inner">
             <a class="nav-item" href="https://956mb.com/about">ABOUT</a>
@@ -36,7 +42,7 @@
                 <div class="contents-inner-image" id="project-inner-image-right">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/TX4.png" alt="" />
+                            <img src="./assets/images/TX4.png" alt="" onclick="toggleOverlay('./assets/images/TX4.png')" />
                         </div>
                     </div>
                 </div>
@@ -46,7 +52,7 @@
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/TDB.png" alt="" />
+                            <img src="./assets/images/TDB.png" alt="" onclick="toggleOverlay('./assets/images/TDB.png')" />
                         </div>
                     </div>
                 </div>
@@ -65,7 +71,7 @@
                 <div class="contents-inner-image image-backup" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/TDB.png" alt="" />
+                            <img src="./assets/images/TDB.png" alt="" onclick="toggleOverlay('./assets/images/TDB.png')" />
                         </div>
                     </div>
                 </div>
@@ -86,7 +92,7 @@
                 <div class="contents-inner-image" id="project-inner-image-right">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/2048W.png" alt="" />
+                            <img src="./assets/images/2048W.png" alt="" onclick="toggleOverlay('./assets/images/2048W.png')" />
                         </div>
                     </div>
                 </div>
@@ -96,7 +102,7 @@
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/mssnc.gif" alt="" />
+                            <img src="./assets/images/mssnc.gif" alt="" onclick="toggleOverlay('./assets/images/mssnc.gif')" />
                         </div>
                     </div>
                 </div>
@@ -115,7 +121,7 @@
                 <div class="contents-inner-image image-backup" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/mssnc.gif" alt="" />
+                            <img src="./assets/images/mssnc.gif" alt="" onclick="toggleOverlay('./assets/images/mssnc.gif')" />
                         </div>
                     </div>
                 </div>
@@ -137,7 +143,7 @@
                 <div class="contents-inner-image" id="project-inner-image-right">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/sag.gif" alt="" />
+                            <img src="./assets/images/sag.gif" alt="" onclick="toggleOverlay('./assets/images/sag.gif')" />
                         </div>
                     </div>
                 </div>
@@ -147,7 +153,7 @@
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/Twanslate.png" alt="" />
+                            <img src="./assets/images/Twanslate.png" alt="" onclick="toggleOverlay('./assets/images/Twanslate.png')" />
                         </div>
                     </div>
                 </div>
@@ -166,7 +172,7 @@
                 <div class="contents-inner-image image-backup" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/Twanslate.png" alt="" />
+                            <img src="./assets/images/Twanslate.png" alt="" onclick="toggleOverlay('./assets/images/Twanslate.png')" />
                         </div>
                     </div>
                 </div>
@@ -187,7 +193,7 @@
                 <div class="contents-inner-image" id="project-inner-image-right">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/GithubDesktopCSS.gif" alt="" />
+                            <img src="./assets/images/GithubDesktopCSS.gif" alt="" onclick="toggleOverlay('./assets/images/GithubDesktopCSS.gif')" />
                         </div>
                     </div>
                 </div>
@@ -197,7 +203,7 @@
                 <div class="contents-inner-image image-main" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/bgames.gif" alt="" />
+                            <img src="./assets/images/bgames.gif" alt="" onclick="toggleOverlay('./assets/images/bgames.gif')" />
                         </div>
                     </div>
                 </div>
@@ -217,16 +223,24 @@
                 <div class="contents-inner-image image-backup" id="project-inner-image-left">
                     <div class="project-image-container">
                         <div class="project-image">
-                            <img src="./assets/images/bgames.gif" alt="" />
+                            <img src="./assets/images/bgames.gif" alt="" onclick="toggleOverlay('./assets/images/bgames.gif')" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="page-spacer"></div>
-
         </div>
     </div>
+
+    <script>
+        function toggleOverlay(passImage) {
+            if (passImage != "") {
+                document.getElementById("overlay-img").src = passImage;
+            }
+            var overlay = document.getElementById("image-overlay");
+            overlay.classList.toggle("disable-overlay");
+        }
+    </script>
 
 </body>
 

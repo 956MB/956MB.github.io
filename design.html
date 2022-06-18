@@ -10,6 +10,12 @@
 </head>
 
 <body>
+
+    <div class="image-view-overlay disable-overlay" id="image-overlay" onclick="toggleOverlay()">
+        <img src="" alt="" id="overlay-img" />
+    </div>
+    <!-- <div class="under-overlay disable-overlay" id="under-overlay"></div> -->
+
     <div class="nav-bar">
         <div class="nav-bar-inner">
             <a class="nav-item" href="https://956mb.com/about">ABOUT</a>
@@ -34,7 +40,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/intros.png" alt="" />
-                            <div class="design-image-overlay-intro">
+                            <div class="design-image-overlay-intro" onclick="toggleOverlay('./assets/images/intros.png')">
                                 <div class="design-overlay-panel-intro">
                                     <div class="text-container-overlay-vertical">
                                         <a class="text-title-overlay-dark">“Intro” or “Frames”</a>
@@ -50,7 +56,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/OPGG.png" alt="" />
-                            <div class="design-image-overlay-opgg">
+                            <div class="design-image-overlay-opgg" onclick="toggleOverlay('./assets/images/OPGG.png')">
                                 <div class="design-overlay-panel-opgg">
                                     <div class="text-container-overlay-vertical">
                                         <a class="text-title-overlay-light">OP.GG Client ‘Spectate Pro Matches’</a>
@@ -72,7 +78,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/LoL.png" alt="" />
-                            <div class="design-image-overlay-lol">
+                            <div class="design-image-overlay-lol" onclick="toggleOverlay('./assets/images/LoL.png')">
                                 <div class="design-overlay-panel-lol">
                                     <div class="text-container-overlay-vertical">
                                         <a class="text-title-overlay-light">LoL Icon tool</a>
@@ -88,7 +94,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/pLan.png" alt="" />
-                            <div class="design-image-overlay-plan">
+                            <div class="design-image-overlay-plan" onclick="toggleOverlay('./assets/images/pLan.png')">
                                 <div class="design-overlay-panel-plan">
                                     <div class="text-container-overlay-vertical">
                                         <a class="text-title-overlay-light">pLan</a>
@@ -116,8 +122,8 @@
                 <div class="design-inner-image" id="deisgn-inner-image-left">
                     <div class="design-image-container">
                         <div class="design-image">
-                            <img src="./assets/images/P3.png" alt="" />
-                            <div class="design-image-overlay-p3">
+                            <img src="./assets/images/P3.png" alt="" onclick="toggleOverlay('./assets/images/P3.png')" />
+                            <div class="design-image-overlay-p3" onclick="toggleOverlay('./assets/images/P3.png')">
                                 <div class="design-overlay-panel-p3">
                                     <div class="text-container-overlay-horizontal">
                                         <a class="text-title-overlay-light" id="align-left">P*3</a>
@@ -133,7 +139,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/C40.jpg" alt="" />
-                            <div class="design-image-overlay-c40">
+                            <div class="design-image-overlay-c40" onclick="toggleOverlay('./assets/images/C40.jpg')">
                                 <div class="design-overlay-panel-c40">
                                     <div class="text-container-overlay-horizontal">
                                         <a class="text-title-overlay-dark" id="align-left">C40</a>
@@ -155,7 +161,7 @@
                     <div class="design-image-container">
                         <div class="design-image">
                             <img src="./assets/images/Cybertruck.png" alt="" />
-                            <div class="design-image-overlay-cybertruck">
+                            <div class="design-image-overlay-cybertruck" onclick="toggleOverlay('./assets/images/Cybertruck.png')">
                                 <div class="design-overlay-panel-cybertruck">
                                     <div class="text-container-overlay-horizontal">
                                         <a class="text-title-overlay-light" id="align-left">Cybertruck</a>
@@ -176,10 +182,18 @@
 
             </div>
 
-            <div class="page-spacer"></div>
-
         </div>
     </div>
+
+    <script>
+        function toggleOverlay(passImage) {
+            if (passImage != "") {
+                document.getElementById("overlay-img").src = passImage;
+            }
+            var overlay = document.getElementById("image-overlay");
+            overlay.classList.toggle("disable-overlay");
+        }
+    </script>
 
 </body>
 

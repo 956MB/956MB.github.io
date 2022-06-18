@@ -1,6 +1,9 @@
 :root {
     --background: #F2F2F2;
     --background-sub: #E8E8E8;
+    /* --background-image-view-overlay: rgb(242, 242, 242, 0.75); */
+    --background-image-view-overlay: rgba(0, 0, 0, 0.85);
+    --background-image-view-overlay-light: rgb(242, 242, 242, 0.75);
     --divider-light: #D1D1D1;
     --divider-dark: #000000;
     --nav-button: #000000;
@@ -84,6 +87,39 @@ body {
     overflow: hidden;
     background-color: var(--background);
     overscroll-behavior-y: contain;
+}
+
+.image-view-overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    background-color: var(--background-image-view-overlay);
+    z-index: 3;
+    padding: 10%;
+}
+
+.under-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--background-image-view-overlay-light);
+    z-index: 2;
+}
+
+.image-view-overlay>img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.disable-overlay {
+    display: none !important;
 }
 
 .nav-bar {
@@ -364,6 +400,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-opgg {
@@ -381,6 +418,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-lol {
@@ -398,6 +436,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-plan {
@@ -415,6 +454,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-p3 {
@@ -432,6 +472,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-c40 {
@@ -449,6 +490,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-overlay-panel-cybertruck {
@@ -466,6 +508,7 @@ body {
     position: absolute;
     bottom: 0px;
     z-index: 3;
+    width: 100%;
 }
 
 .design-image-overlay-intro {
@@ -869,6 +912,18 @@ body {
 }
 
 @media only screen and (max-width: 950px) {
+    .image-view-overlay {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        background-color: #131313;
+        z-index: 3;
+        padding: 5%;
+    }
     #text-container-about {
         padding-right: 0;
     }
@@ -887,6 +942,7 @@ body {
         overflow: auto;
         padding-left: 5%;
         padding-right: 5%;
+        padding-top: 10px;
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-right-about {
@@ -1021,14 +1077,14 @@ body {
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-left {
-        padding-top: 30px;
+        padding-top: 40px;
         padding-right: 0;
         flex-direction: row;
         text-align: left;
         justify-content: flex-start;
     }
     #project-inner-text-right {
-        padding-top: 30px;
+        padding-top: 40px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;
