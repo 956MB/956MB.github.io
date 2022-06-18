@@ -1035,15 +1035,6 @@ body {
     }
 }
 
-@media only screen and (max-width: 1500px) {
-    #text-container-left {
-        padding-left: 40%;
-    }
-    #text-container-right {
-        padding-right: 40%;
-    }
-}
-
 @media only screen and (min-width: 1370px) and (max-width: 1499px) {
     #text-container-left {
         padding-left: 30%;
