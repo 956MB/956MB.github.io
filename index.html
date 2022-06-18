@@ -24,6 +24,10 @@
             <a class="active-nav-item" href="https://956mb.com/">PROGRAMMING</a>
             <a class="nav-item" href="https://956mb.com/design">DESIGN</a>
         </div>
+
+        <a class="theme-toggle-icon" onclick="toggleTheme()">
+            <img src="./assets/images/themetoggle.png" alt="" />
+        </a>
     </div>
 
     <div class="contents">
@@ -286,15 +290,7 @@
         </div>
     </div>
 
-    <script>
-        function toggleOverlay(passImage) {
-            if (passImage) {
-                document.getElementById("overlay-img").src = passImage;
-            }
-            var overlay = document.getElementById("image-overlay");
-            overlay.classList.toggle("disable-overlay");
-        }
-    </script>
+    <script src="./assets/scripts/DOM.js"></script>
 
 </body>
 

@@ -758,6 +758,27 @@ body {
     object-fit: contain;
 }
 
+.theme-toggle-icon {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 50px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.theme-toggle-icon>img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+body.theme-dark .theme-toggle-icon>img {
+    max-width: 100%;
+    object-fit: contain;
+    filter: invert();
+}
+
 body.theme-dark .github-icon>img {
     max-width: 100%;
     object-fit: contain;
@@ -991,6 +1012,9 @@ body.theme-dark .divider-left {
 }
 
 @media only screen and (max-width: 950px) {
+    .theme-toggle-icon {
+        display: none !important;
+    }
     .projects-bar-inner {
         width: 100%;
         display: flex;
