@@ -265,7 +265,7 @@ body {
 }
 
 #project-inner-text-left {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-right: 30px;
     flex-direction: row;
     text-align: left;
@@ -273,7 +273,7 @@ body {
 }
 
 #project-inner-text-right {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-left: 30px;
     flex-direction: row;
     text-align: left;
@@ -281,7 +281,7 @@ body {
 }
 
 #project-inner-text-right-about {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-left: 30px;
     flex-direction: row;
     text-align: left;
@@ -1098,14 +1098,14 @@ body {
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-left {
-        padding-top: 40px;
+        padding-top: 50px;
         padding-right: 0;
         flex-direction: row;
         text-align: left;
         justify-content: flex-start;
     }
     #project-inner-text-right {
-        padding-top: 40px;
+        padding-top: 50px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;
