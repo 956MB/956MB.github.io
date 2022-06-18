@@ -714,12 +714,13 @@ body {
 
 .github-icon {
     margin-left: 15px;
+    width: 23px;
+    height: 23px;
 }
 
 .github-icon>img {
-    margin-top: 2px;
-    width: 23px;
-    height: 23px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .text-container-overlay-vertical {
