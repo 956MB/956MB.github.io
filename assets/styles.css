@@ -83,6 +83,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: var(--background);
+    overscroll-behavior-y: contain;
 }
 
 .nav-bar {
@@ -1020,14 +1021,14 @@ body {
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-left {
-        padding-top: 40px;
+        padding-top: 30px;
         padding-right: 0;
         flex-direction: row;
         text-align: left;
         justify-content: flex-start;
     }
     #project-inner-text-right {
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;
