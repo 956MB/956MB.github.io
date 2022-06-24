@@ -282,9 +282,9 @@ body {
     margin-bottom: 30px;
 }
 
-.contents-inner-about {
+/* .contents-inner-about {
     margin-bottom: 30px;
-}
+} */
 
 .contents-inner-image {
     display: flex;
@@ -729,6 +729,13 @@ body {
     color: var(--link-color);
     font-size: 13px;
     font-family: "NeueHaasUnicaProMedium";
+    text-decoration: none;
+}
+
+.about-link-value:hover {
+    color: var(--link-color);
+    font-size: 13px;
+    font-family: "NeueHaasUnicaProMedium";
     text-decoration: underline;
 }
 
@@ -1109,8 +1116,11 @@ body.theme-dark .divider-left {
     #text-container-right {
         padding-right: 0;
     }
-    .contents-inner-about {
-        margin-bottom: 50px;
+    .about-link-value {
+        color: var(--link-color);
+        font-size: 13px;
+        font-family: "NeueHaasUnicaProMedium";
+        text-decoration: underline;
     }
     .contents-row-about {
         position: relative;
@@ -1121,11 +1131,10 @@ body.theme-dark .divider-left {
         overflow: auto;
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 10px;
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-right-about {
-        padding-top: 10px;
+        padding-top: 30px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;
@@ -1246,7 +1255,8 @@ body.theme-dark .divider-left {
     }
     #about-links-container-backup {
         display: block;
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 120px;
     }
     .first-row {
         margin-top: 0;
