@@ -1041,9 +1041,9 @@ body.theme-dark .divider-left {
 .tag-skill {
     display: block;
     background-color: var(--background-tag);
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 4px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 3px;
     padding-bottom: 5px;
     margin-right: 10px;
     border-radius: 20px;
@@ -1051,8 +1051,10 @@ body.theme-dark .divider-left {
 }
 
 .tag-skill-text {
+    pointer-events: none;
     color: var(--tag);
-    font-size: 13px;
+    font-size: 12px;
+    text-transform: lowercase;
     font-family: "NeueHaasUnicaProMedium";
 }
 
