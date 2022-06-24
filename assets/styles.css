@@ -767,11 +767,20 @@ body {
     object-fit: contain;
 }
 
-.theme-toggle-icon {
+.theme-toggle-icon-top {
     display: block;
     position: absolute;
     top: 14px;
-    right: 50px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.theme-toggle-icon-bottom {
+    display: none;
+}
+
+.theme-toggle-icon {
+    display: block;
     width: 22px;
     height: 22px;
     cursor: pointer;
@@ -1059,8 +1068,20 @@ body.theme-dark .divider-left {
 }
 
 @media only screen and (max-width: 950px) {
-    .theme-toggle-icon {
-        display: none !important;
+    .theme-toggle-icon-top {
+        display: none;
+    }
+    .theme-toggle-icon-bottom {
+        display: block;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: var(--background);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+        z-index: 3;
     }
     .projects-bar-inner {
         width: 100%;
@@ -1171,6 +1192,14 @@ body.theme-dark .divider-left {
         object-fit: contain;
         cursor: pointer;
     }
+    .text-title-project {
+        color: var(--title);
+        font-size: 28px;
+        margin: 0;
+        font-family: "NeueHaasUnicaProBold";
+        text-decoration: underline;
+        margin-right: auto;
+    }
     .text-title-section {
         color: var(--nav-button-inactive);
         font-size: 15px;
@@ -1235,14 +1264,14 @@ body.theme-dark .divider-left {
         border-top: 1px solid var(--divider-light);
     }
     #project-inner-text-left {
-        padding-top: 50px;
+        padding-top: 30px;
         padding-right: 0;
         flex-direction: row;
         text-align: left;
         justify-content: flex-start;
     }
     #project-inner-text-right {
-        padding-top: 50px;
+        padding-top: 30px;
         padding-left: 0;
         flex-direction: row;
         text-align: left;

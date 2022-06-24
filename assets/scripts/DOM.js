@@ -5,7 +5,9 @@ function toggleOverlay(passImage) {
         document.getElementById("overlay-img").src = passImage;
     }
     let overlay = document.getElementById("image-overlay");
+    let toggle = document.getElementById("bottom-theme-toggle");
     overlay.classList.toggle("disable-overlay");
+    toggle.classList.toggle("disable-overlay");
 }
 
 function toggleTheme() {
