@@ -217,12 +217,17 @@ body {
     right: 0;
 }
 
-.contents-row {
-    position: relative;
+.contents-row-about {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    flex-wrap: wrap;
+    position: relative;
     overflow: auto;
     border-top: 1px solid var(--divider-light);
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .scroll-container {
@@ -278,6 +283,10 @@ body {
     margin-bottom: 30px;
 }
 
+.contents-inner-about {
+    margin-bottom: 30px;
+}
+
 .contents-inner-image {
     display: flex;
     flex-direction: column;
@@ -325,7 +334,6 @@ body {
     flex-direction: row;
     text-align: left;
     justify-content: flex-start;
-    margin-right: 10%;
 }
 
 #project-inner-image-right {
@@ -816,7 +824,7 @@ body.theme-dark .github-icon>img {
 }
 
 #text-container-about {
-    padding-right: 30%;
+    padding-right: 0;
 }
 
 #text-container-left {
@@ -934,6 +942,8 @@ body.theme-dark .divider-left {
     font-size: 15px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
+    /* font-weight: 400;
+    font-family: 'Source Code Pro', monospace; */
 }
 
 .text-paragraph-overlay-light {
@@ -941,6 +951,8 @@ body.theme-dark .divider-left {
     font-size: 14px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
+    /* font-weight: 400;
+    font-family: 'Source Code Pro', monospace; */
 }
 
 .text-paragraph-overlay-dark {
@@ -948,6 +960,8 @@ body.theme-dark .divider-left {
     font-size: 14px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
+    /* font-weight: 400;
+    font-family: 'Source Code Pro', monospace; */
 }
 
 .text-paragraph me {
@@ -1052,16 +1066,16 @@ body.theme-dark .divider-left {
         z-index: 3;
         padding: 5%;
     }
-    #text-container-about {
-        padding-right: 0;
-    }
     #text-container-left {
         padding-left: 0;
     }
     #text-container-right {
         padding-right: 0;
     }
-    .contents-row {
+    .contents-inner-about {
+        margin-bottom: 50px;
+    }
+    .contents-row-about {
         position: relative;
         display: flex;
         flex-wrap: wrap;
