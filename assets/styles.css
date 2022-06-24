@@ -53,7 +53,7 @@
 @font-face {
     font-family: "NeueHaasUnicaProMedium";
     src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Medium.ttf") format("truetype");
-    font-weight: medium;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -61,7 +61,7 @@
 @font-face {
     font-family: "NeueHaasUnicaProMediumIt";
     src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-MediumIt.ttf") format("truetype");
-    font-weight: medium;
+    font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
@@ -69,7 +69,7 @@
 @font-face {
     font-family: "NeueHaasUnicaProBold";
     src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Bold.ttf") format("truetype");
-    font-weight: bold;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -146,22 +146,22 @@ body {
     color: var(--nav-button-inactive);
     margin-left: 15px;
     margin-right: 15px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .nav-bar .active-nav-item {
     color: var(--nav-button) !important;
     margin-left: 15px;
     margin-right: 15px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .projects-bar {
@@ -190,11 +190,11 @@ body {
     color: var(--nav-button-inactive);
     margin-left: 15px;
     margin-right: 15px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .manual-divider {
@@ -713,7 +713,7 @@ body {
 
 .about-link-key {
     color: var(--link-inactive);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 13px;
     text-decoration: none;
     font-family: "NeueHaasUnicaProRegular";
@@ -721,9 +721,9 @@ body {
 
 .about-link-value {
     color: var(--link-color);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 13px;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
     text-decoration: underline;
 }
 
@@ -753,8 +753,8 @@ body {
 
 .github-icon {
     margin-left: 15px;
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
 }
 
 .github-icon>img {
@@ -767,8 +767,8 @@ body {
     position: absolute;
     top: 14px;
     right: 50px;
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 }
 
@@ -880,7 +880,7 @@ body.theme-dark .divider-left {
 
 .text-title {
     color: var(--title);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 28px;
     margin: 0;
     font-family: "NeueHaasUnicaProMedium";
@@ -888,23 +888,23 @@ body.theme-dark .divider-left {
 
 .text-title-overlay-light {
     color: var(--overlay-title-dark);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
     margin: 0;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .text-title-overlay-dark {
     color: var(--overlay-title-light);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
     margin: 0;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .text-title-small {
     color: var(--title);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     margin: 0;
     margin-top: 15px;
@@ -913,7 +913,7 @@ body.theme-dark .divider-left {
 
 .text-title-skills {
     color: var(--title);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 13px;
     margin: 0;
     /* margin-top: auto; */
@@ -922,11 +922,11 @@ body.theme-dark .divider-left {
 
 .text-title-section {
     color: var(--nav-button-inactive);
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     margin: 0;
     margin-left: 5%;
-    font-family: "NeueHaasUnicaProRegular";
+    font-family: "NeueHaasUnicaProMedium";
 }
 
 .text-paragraph {
@@ -951,67 +951,80 @@ body.theme-dark .divider-left {
 }
 
 .text-paragraph me {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
 }
 
 .text-paragraph dallas {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
 }
 
 .text-paragraph swift {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-swift);
 }
 
 .text-paragraph swiftui {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-swiftui);
 }
 
 .text-paragraph cpp {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-cpp);
 }
 
 .text-paragraph qt {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-qt);
 }
 
 .text-paragraph js {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-js);
 }
 
 .text-paragraph htm {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-html);
 }
 
 .text-paragraph css {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-css);
 }
 
 .text-paragraph electron {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-electron);
 }
 
 .text-paragraph csharp {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-csharp);
 }
 
 .text-paragraph unity {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-unity);
 }
 
 .text-paragraph python {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-python);
 }
 
@@ -1130,7 +1143,7 @@ body.theme-dark .divider-left {
     }
     .text-title-section {
         color: var(--nav-button-inactive);
-        font-weight: bold;
+        font-weight: 500;
         font-size: 15px;
         margin: 0;
         margin-left: 5%;
