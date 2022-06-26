@@ -950,7 +950,6 @@ body.theme-dark .divider-left {
     color: var(--title);
     font-size: 13px;
     margin: 0;
-    /* margin-top: auto; */
     font-family: "NeueHaasUnicaProBold";
 }
 
@@ -967,8 +966,6 @@ body.theme-dark .divider-left {
     font-size: 15px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
-    /* font-weight: 400;
-    font-family: 'Source Code Pro', monospace; */
 }
 
 .text-paragraph-overlay-light {
@@ -976,8 +973,6 @@ body.theme-dark .divider-left {
     font-size: 14px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
-    /* font-weight: 400;
-    font-family: 'Source Code Pro', monospace; */
 }
 
 .text-paragraph-overlay-dark {
@@ -985,15 +980,13 @@ body.theme-dark .divider-left {
     font-size: 14px;
     margin: 0;
     font-family: "NeueHaasUnicaProRegular";
-    /* font-weight: 400;
-    font-family: 'Source Code Pro', monospace; */
 }
 
+/* #region paragraph colors */
 .text-paragraph me {
     font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
 }
-
 .text-paragraph dallas {
     font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
@@ -1053,6 +1046,7 @@ body.theme-dark .divider-left {
     font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-python);
 }
+/* #endregion */
 
 .tag-skill {
     display: block;
@@ -1093,10 +1087,11 @@ body.theme-dark .divider-left {
     .projects-bar-inner {
         width: 100%;
         display: flex;
-        align-items: left;
         overflow-x: scroll;
         direction: ltr;
         justify-content: left;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .image-view-overlay {
         display: flex;
@@ -1171,9 +1166,61 @@ body.theme-dark .divider-left {
         text-align: center;
         justify-content: center;
     }
-    /* .image-empty {
-        display: none !important;
-    } */
+    .design-image-overlay-intro {
+        display: none;
+    }
+
+    .design-image-overlay-intro:hover {
+        display: none;
+    }
+
+    .design-image-overlay-opgg {
+        display: none;
+    }
+
+    .design-image-overlay-opgg:hover {
+        display: none;
+    }
+
+    .design-image-overlay-lol {
+        display: none;
+    }
+
+    .design-image-overlay-lol:hover {
+        display: none;
+    }
+
+    .design-image-overlay-plan {
+        display: none;
+    }
+
+    .design-image-overlay-plan:hover {
+        display: none;
+    }
+
+    .design-image-overlay-p3 {
+        display: none;
+    }
+
+    .design-image-overlay-p3:hover {
+        display: none;
+    }
+
+    .design-image-overlay-c40 {
+        display: none;
+    }
+
+    .design-image-overlay-c40:hover {
+        display: none;
+    }
+
+    .design-image-overlay-cybertruck {
+        display: none;
+    }
+
+    .design-image-overlay-cybertruck:hover {
+        display: none;
+    }
     .contents-row-design {
         position: relative;
         display: flex;
