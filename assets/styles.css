@@ -16,7 +16,7 @@
     --title-sub: #A1A1A1;
     --paragraph-normal: #808080;
     --paragraph-black: #202020;
-    --paragraph-swift: #F25700;
+    --paragraph-swift: #141414;
     --paragraph-swiftui: #4987FF;
     --paragraph-cpp: #0084CE;
     --paragraph-qt: #4CC700;
@@ -24,9 +24,12 @@
     --paragraph-html: #DB3500;
     --paragraph-css: #0085E5;
     --paragraph-electron: #86C7C7;
+    --paragraph-tauri: #141414;
     --paragraph-csharp: #BA2DEC;
     --paragraph-unity: #212121;
     --paragraph-python: #5A97BA;
+    --paragraph-go: #141414;
+    --paragraph-rust: #141414;
     --image-background: #DADADA;
     --overlay-title-light: #000000;
     --overlay-title-dark: #F4F4F4;
@@ -52,37 +55,7 @@
     pointer-events: none;
 }
 
-@font-face {
-    font-family: "NeueHaasUnicaProMedium";
-    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "NeueHaasUnicaProMediumIt";
-    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-MediumIt.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "NeueHaasUnicaProBold";
-    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "NeueHaasUnicaProRegular";
-    src: url("./fonts/Neue-Haas-Unica-Pro/NeueHaasUnicaPro-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://rsms.me/inter/inter.css');
 
 html,
 body {
@@ -93,6 +66,10 @@ body {
     overflow: hidden;
     background-color: var(--background);
     overscroll-behavior-y: contain;
+    font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
 }
 
 .image-view-overlay {
@@ -151,7 +128,7 @@ body {
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .nav-bar .active-nav-item {
@@ -161,7 +138,7 @@ body {
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .projects-bar {
@@ -193,7 +170,7 @@ body {
     font-size: 15px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .manual-divider {
@@ -405,6 +382,7 @@ body {
 }
 
 .design-image {
+    position: relative;
     display: block;
     background-color: var(--image-background);
 }
@@ -431,270 +409,110 @@ body {
     cursor: pointer;
 }
 
-.design-overlay-panel-intro {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
 
-.design-image-overlay-intro:hover .design-overlay-panel-intro {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-intro);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-opgg {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-opgg:hover .design-overlay-panel-opgg {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-opgg);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-lol {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-lol:hover .design-overlay-panel-lol {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-lolicon);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-plan {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-plan:hover .design-overlay-panel-plan {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-plan);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-p3 {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-p3:hover .design-overlay-panel-p3 {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-p3);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-c40 {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-c40:hover .design-overlay-panel-c40 {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-c40);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-overlay-panel-cybertruck {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-}
-
-.design-image-overlay-cybertruck:hover .design-overlay-panel-cybertruck {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    background-color: var(--overlay-panel-p3);
-    position: absolute;
-    bottom: 0px;
-    z-index: 3;
-    width: 100%;
-}
-
-.design-image-overlay-intro {
+.o-intro,
+.o-opgg,
+.o-lol,
+.o-plan,
+.o-p3,
+.o-p3,
+.o-c40,
+.o-cybertruck
+{
     display: block;
     position: absolute;
-    top: 0px;
+    top: 0;
+    left: 0;
     z-index: 2;
-    width: 44%;
+    width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
-.design-image-overlay-intro:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-intro:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-intro));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-opgg {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-opgg:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-opgg:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-opgg));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-lol {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-lol:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-lol:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-lolicon));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-plan {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-plan:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-plan:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-plan));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-p3 {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-p3:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-p3:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-p3));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-c40 {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-c40:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-c40:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-c40));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
 }
 
-.design-image-overlay-cybertruck {
-    display: block;
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-}
-
-.design-image-overlay-cybertruck:hover {
-    display: block;
-    position: absolute;
-    top: 0px;
+.o-cybertruck:hover {
+    display: block !important;
     background: linear-gradient(rgba(230, 100, 100, 0), var(--overlay-gradient-cybertruck));
-    z-index: 2;
-    width: 44%;
-    height: 100%;
-    cursor: pointer;
+}
+
+.design-panel {
+    display: none !important;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.o-intro:hover .p-intro,
+.o-opgg:hover .p-opgg,
+.o-lol:hover .p-lol,
+.o-plan:hover .p-plan,
+.o-p3:hover .p-p3,
+.o-c40:hover .p-c40,
+.o-cybertruck:hover .p-cybertruck
+{
+    display: block !important;
+}
+
+
+.o-intro:hover .p-intro {
+    background-color: var(--overlay-panel-intro);
+}
+
+.o-opgg:hover .p-opgg {
+    background-color: var(--overlay-panel-opgg);
+}
+
+.o-lol:hover .p-lol {
+    background-color: var(--overlay-panel-lolicon);
+}
+
+.o-plan:hover .p-plan {
+    background-color: var(--overlay-panel-plan);
+}
+
+.o-p3:hover .p-p3 {
+    background-color: var(--overlay-panel-p3);
+}
+
+.o-c40:hover .p-c40 {
+    background-color: var(--overlay-panel-c40);
+}
+
+.o-cybertruck:hover .p-cybertruck {
+    background-color: var(--overlay-panel-p3);
 }
 
 .about-links-container {
@@ -720,22 +538,18 @@ body {
 
 .about-link-key {
     color: var(--link-inactive);
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
-    font-family: "NeueHaasUnicaProRegular";
 }
 
 .about-link-value {
     color: var(--link-color);
-    font-size: 13px;
-    font-family: "NeueHaasUnicaProMedium";
+    font-size: 14px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .about-link-value:hover {
-    color: var(--link-color);
-    font-size: 13px;
-    font-family: "NeueHaasUnicaProMedium";
     text-decoration: underline;
 }
 
@@ -813,7 +627,7 @@ body.theme-dark .github-icon>img {
 .text-container-overlay-vertical {
     display: flex;
     flex-wrap: wrap;
-    margin: 15px;
+    margin: 25px;
     text-align: left;
     flex-direction: column;
     row-gap: 10px;
@@ -822,7 +636,7 @@ body.theme-dark .github-icon>img {
 .text-container-overlay-horizontal {
     display: flex;
     flex-wrap: nowrap;
-    margin: 15px;
+    margin: 25px;
     text-align: left;
     flex-direction: row;
     align-items: center;
@@ -841,11 +655,11 @@ body.theme-dark .github-icon>img {
 }
 
 #text-container-left {
-    padding-left: 50%;
+    padding-left: 55%;
 }
 
 #text-container-right {
-    padding-right: 50%;
+    padding-right: 55%;
 }
 
 .divider-top {
@@ -903,23 +717,22 @@ body.theme-dark .divider-left {
     color: var(--title);
     font-size: 28px;
     margin: 0;
-    font-family: "NeueHaasUnicaProBold";
+    font-weight: bold;
 }
 
 .text-title-project {
     color: var(--title);
     font-size: 28px;
     margin: 0;
-    font-family: "NeueHaasUnicaProBold";
     text-decoration: none;
     margin-right: auto;
+    font-weight: bold;
 }
 
 .text-title-project:hover {
     color: var(--title);
     font-size: 28px;
     margin: 0;
-    font-family: "NeueHaasUnicaProBold";
     text-decoration: underline;
     margin-right: auto;
 }
@@ -928,14 +741,14 @@ body.theme-dark .divider-left {
     color: var(--overlay-title-dark);
     font-size: 20px;
     margin: 0;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .text-title-overlay-dark {
     color: var(--overlay-title-light);
     font-size: 20px;
     margin: 0;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .text-title-small {
@@ -943,14 +756,13 @@ body.theme-dark .divider-left {
     font-size: 15px;
     margin: 0;
     margin-top: 15px;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .text-title-skills {
     color: var(--title);
     font-size: 13px;
     margin: 0;
-    font-family: "NeueHaasUnicaProBold";
 }
 
 .text-title-section {
@@ -958,93 +770,95 @@ body.theme-dark .divider-left {
     font-size: 15px;
     margin: 0;
     margin-left: 5%;
-    font-family: "NeueHaasUnicaProMedium";
+    font-weight: bold;
 }
 
 .text-paragraph {
     color: var(--paragraph-normal);
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
-    font-family: "NeueHaasUnicaProRegular";
+    line-height: 1.25;
 }
 
 .text-paragraph-overlay-light {
     color: var(--overlay-paragraph-dark);
     font-size: 14px;
     margin: 0;
-    font-family: "NeueHaasUnicaProRegular";
+    line-height: 1.25;
 }
 
 .text-paragraph-overlay-dark {
     color: var(--overlay-paragraph-light);
     font-size: 14px;
     margin: 0;
-    font-family: "NeueHaasUnicaProRegular";
+    line-height: 1.25;
 }
 
 /* #region paragraph colors */
+.text-paragraph .bold {
+    font-weight: bold;
+}
 .text-paragraph me {
-    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
 }
 .text-paragraph dallas {
-    font-family: "NeueHaasUnicaProMedium";
     color: var(--paragraph-black);
 }
 
 .text-paragraph swift {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-swift);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph swiftui {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-swiftui);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph cpp {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-cpp);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph qt {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-qt);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph js {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-js);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph htm {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-html);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph css {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-css);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph electron {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-electron);
+    color: var(--paragraph-black);
+}
+
+.text-paragraph tauri {
+    color: var(--paragraph-black);
 }
 
 .text-paragraph csharp {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-csharp);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph unity {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-unity);
+    color: var(--paragraph-black);
 }
 
 .text-paragraph python {
-    font-family: "NeueHaasUnicaProMedium";
-    color: var(--paragraph-python);
+    color: var(--paragraph-black);
+}
+
+.text-paragraph go {
+    color: var(--paragraph-black);
+}
+
+.text-paragraph rust {
+    color: var(--paragraph-black);
 }
 /* #endregion */
 
@@ -1058,6 +872,7 @@ body.theme-dark .divider-left {
     margin-right: 10px;
     border-radius: 20px;
     align-items: center;
+    font-weight: bold;
 }
 
 .tag-skill-text {
@@ -1065,7 +880,6 @@ body.theme-dark .divider-left {
     color: var(--tag);
     font-size: 12px;
     text-transform: lowercase;
-    font-family: "NeueHaasUnicaProMedium";
 }
 
 @media only screen and (max-width: 950px) {
@@ -1113,9 +927,9 @@ body.theme-dark .divider-left {
     }
     .about-link-value {
         color: var(--link-color);
-        font-size: 13px;
-        font-family: "NeueHaasUnicaProMedium";
+        font-size: 14px;
         text-decoration: underline;
+        font-weight: bold;
     }
     .contents-row-about {
         position: relative;
@@ -1166,61 +980,24 @@ body.theme-dark .divider-left {
         text-align: center;
         justify-content: center;
     }
-    .design-image-overlay-intro {
+    .o-intro,
+    .o-opgg,
+    .o-lol,
+    .o-plan,
+    .o-p3,
+    .o-c40,
+    .o-cybertruck,
+    .o-intro:hover,
+    .o-opgg:hover,
+    .o-lol:hover,
+    .o-plan:hover,
+    .o-p3:hover,
+    .o-c40:hover,
+    .o-cybertruck:hover
+    {
         display: none;
     }
 
-    .design-image-overlay-intro:hover {
-        display: none;
-    }
-
-    .design-image-overlay-opgg {
-        display: none;
-    }
-
-    .design-image-overlay-opgg:hover {
-        display: none;
-    }
-
-    .design-image-overlay-lol {
-        display: none;
-    }
-
-    .design-image-overlay-lol:hover {
-        display: none;
-    }
-
-    .design-image-overlay-plan {
-        display: none;
-    }
-
-    .design-image-overlay-plan:hover {
-        display: none;
-    }
-
-    .design-image-overlay-p3 {
-        display: none;
-    }
-
-    .design-image-overlay-p3:hover {
-        display: none;
-    }
-
-    .design-image-overlay-c40 {
-        display: none;
-    }
-
-    .design-image-overlay-c40:hover {
-        display: none;
-    }
-
-    .design-image-overlay-cybertruck {
-        display: none;
-    }
-
-    .design-image-overlay-cybertruck:hover {
-        display: none;
-    }
     .contents-row-design {
         position: relative;
         display: flex;
@@ -1252,7 +1029,6 @@ body.theme-dark .divider-left {
         color: var(--title);
         font-size: 28px;
         margin: 0;
-        font-family: "NeueHaasUnicaProBold";
         text-decoration: underline;
         margin-right: auto;
     }
@@ -1261,7 +1037,6 @@ body.theme-dark .divider-left {
         font-size: 15px;
         margin: 0;
         margin-left: 5%;
-        font-family: "NeueHaasUnicaProMedium";
     }
     .image-main {
         display: none;
@@ -1392,6 +1167,8 @@ body.theme-dark {
     --paragraph-csharp: #BA2DEC;
     --paragraph-unity: #f2f2f2;
     --paragraph-python: #50b0e7;
+    --paragraph-go: #f2f2f2;
+    --paragraph-rust: #f2f2f2;
     --image-background: #111111;
     --overlay-title-light: #000000;
     --overlay-title-dark: #F4F4F4;
